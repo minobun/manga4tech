@@ -1,0 +1,71 @@
+[
+  {
+    "id": "tcp",
+    "term": "TCP",
+    "description": "Transmission Control Protocol。データが確実に届くことを保証する信頼性重視のプロトコル。送受信の確認（3ウェイハンドシェイク）を行い、パケットの順序保証・再送制御を実施する。WebやメールなどHTTPSが必要な通信に使われる。",
+    "panels": [
+      {
+        "image": "images/tcp_1.png",
+        "caption": "送信者「荷物を送っていいですか？」\nTCPくん「まず確認させてください！」"
+      },
+      {
+        "image": "images/tcp_2.png",
+        "caption": "TCPくん「準備OKです、どうぞ！」\n送信者「了解！送ります！」"
+      },
+      {
+        "image": "images/tcp_3.png",
+        "caption": "（荷物を1個ずつ丁寧に確認しながら配送中）\nTCPくん「3番が届いてないな…再送しよう」"
+      },
+      {
+        "image": "images/tcp_4.png",
+        "caption": "受信者「全部ちゃんと届いた！ありがとう！」\nTCPくん「確実な配送がモットーです！」"
+      }
+    ]
+  },
+  {
+    "id": "udp",
+    "term": "UDP",
+    "description": "User Datagram Protocol。確認なしにデータを送りつける速度重視のプロトコル。信頼性より速さが優先される動画ストリーミング・音声通話・オンラインゲームなどに使われる。",
+    "panels": [
+      {
+        "image": "images/udp_1.png",
+        "caption": "UDPくん「荷物届けに来たよ！（ピンポンも押さずにポスト投函）」"
+      },
+      {
+        "image": "images/udp_2.png",
+        "caption": "UDPくん「次の荷物も！これも！あれも！」\n（確認せず次々と投函）"
+      },
+      {
+        "image": "images/udp_3.png",
+        "caption": "受信者「あれ、2番の荷物がない…」\nUDPくん「もう次行ってます！再送？知らん！」"
+      },
+      {
+        "image": "images/udp_4.png",
+        "caption": "受信者「でも確かに速い…」\nUDPくん「速さこそ正義！ゲームと動画はお任せを！」"
+      }
+    ]
+  },
+  {
+    "id": "dns",
+    "term": "DNS",
+    "description": "Domain Name System。人間に読みやすいドメイン名（example.com）をコンピュータが使うIPアドレス（93.184.216.34）に変換する仕組み。インターネットの「電話帳」とも呼ばれる。",
+    "panels": [
+      {
+        "image": "images/dns_1.png",
+        "caption": "ユーザー「google.comに行きたいんだけど…」\nDNSさん「番号調べますね！」"
+      },
+      {
+        "image": "images/dns_2.png",
+        "caption": "DNSさん（分厚い電話帳をパラパラ）\n「えーと、google.com…142.250.xx.xxですね！」"
+      },
+      {
+        "image": "images/dns_3.png",
+        "caption": "ユーザー「毎回調べるの大変じゃないですか？」\nDNSさん「一定時間はキャッシュしてるので大丈夫です！」"
+      },
+      {
+        "image": "images/dns_4.png",
+        "caption": "ユーザー「DNSさんがいないとネット使えないんですね」\nDNSさん「私が止まるとみんなが困る、縁の下の力持ちです」"
+      }
+    ]
+  }
+]
