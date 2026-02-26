@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="証券アナリスト向け半導体・AI技術用語を四コマ漫画で解説。CoWoS・CPO・HBMなど、決算・レポート読解に必要な専門用語をわかりやすく説明します。">
+  <title>マンガで学ぶアナリスト技術用語</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="securities">
+
+  <nav class="site-nav" aria-label="カテゴリ選択">
+    <a class="site-nav-link" href="index.html">ネットワーク用語</a>
+    <a class="site-nav-link active" href="securities.html">アナリスト技術用語</a>
+  </nav>
+
+  <header>
+    <h1>マンガで学ぶアナリスト技術用語</h1>
+    <p>決算・レポートに出てくる半導体・AI用語をアナリスト目線で解説！</p>
+  </header>
+
+  <nav id="term-nav" aria-label="用語一覧">
+    <!-- dynamically populated by app.js -->
+  </nav>
+
+  <main>
+    <p id="loading">読み込み中...</p>
+    <p id="error-msg" hidden></p>
+    <div id="comics-container"
+         data-src="data/securities.json"
+         data-label="アナリスト技術用語四コマ"
+         aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <p>マンガで学ぶ技術用語 &mdash; 静的サイト / GitHub Pages</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

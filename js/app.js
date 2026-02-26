@@ -1,22 +1,24 @@
 'use strict';
 
-const DATA_URL = 'data/comics.json';
-
 async function loadComics() {
   const loading = document.getElementById('loading');
   const errorMsg = document.getElementById('error-msg');
   const comicsContainer = document.getElementById('comics-container');
   const termNav = document.getElementById('term-nav');
 
+  // Data source is declared on the container element via data-src attribute
+  const dataUrl = comicsContainer.dataset.src;
+  const cardLabel = comicsContainer.dataset.label || '四コマ';
+
   try {
-    const res = await fetch(DATA_URL);
+    const res = await fetch(dataUrl);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const comics = await res.json();
 
     loading.remove();
     buildNav(comics, termNav);
-    buildComics(comics, comicsContainer);
-    handleHashNav(comics);
+    buildComics(comics, comicsContainer, cardLabel);
+    handleHashNav();
   } catch (err) {
     loading.remove();
     errorMsg.textContent = `データの読み込みに失敗しました: ${err.message}`;
@@ -44,22 +46,18 @@ function setActiveNav(activeBtn) {
   activeBtn.classList.add('active');
 }
 
-function buildComics(comics, container) {
+function buildComics(comics, container, cardLabel) {
   comics.forEach(comic => {
-    const card = createCard(comic);
-    container.appendChild(card);
+    container.appendChild(createCard(comic, cardLabel));
   });
-
-  // Highlight nav on scroll
   setupScrollSpy(comics);
 }
 
-function createCard(comic) {
+function createCard(comic, cardLabel) {
   const card = document.createElement('article');
   card.className = 'comic-card';
   card.id = `comic-${comic.id}`;
 
-  // Header
   const header = document.createElement('div');
   header.className = 'comic-header';
   const fullNameHtml = comic.fullName
@@ -69,19 +67,16 @@ function createCard(comic) {
     <span class="term-badge">${escapeHtml(comic.term)}</span>
     <div class="term-title-group">
       ${fullNameHtml}
-      <h2>ネットワーク用語四コマ</h2>
+      <h2>${escapeHtml(cardLabel)}</h2>
     </div>
   `;
 
-  // Panel grid
   const grid = document.createElement('div');
   grid.className = 'panels-grid';
-
   (comic.panels || []).forEach((panel, i) => {
     grid.appendChild(createPanel(panel, i + 1));
   });
 
-  // Description
   const desc = document.createElement('div');
   desc.className = 'comic-description';
   desc.innerHTML = `
@@ -108,18 +103,9 @@ function createPanel(panel, num) {
     const img = new Image();
     img.alt = `コマ${num}`;
     img.loading = 'lazy';
-
-    // Show placeholder until image loads; swap on success
     const placeholder = makePlaceholder(num);
     imageWrap.appendChild(placeholder);
-
-    img.onload = () => {
-      imageWrap.innerHTML = '';
-      imageWrap.appendChild(img);
-    };
-    img.onerror = () => {
-      // Keep placeholder if image fails to load
-    };
+    img.onload = () => { imageWrap.innerHTML = ''; imageWrap.appendChild(img); };
     img.src = panel.image;
   } else {
     imageWrap.appendChild(makePlaceholder(num));
@@ -144,7 +130,6 @@ function makePlaceholder(num) {
 }
 
 function setupScrollSpy(comics) {
-  const ids = comics.map(c => `comic-${c.id}`);
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -155,13 +140,13 @@ function setupScrollSpy(comics) {
     });
   }, { rootMargin: '-30% 0px -60% 0px' });
 
-  ids.forEach(id => {
-    const el = document.getElementById(id);
+  comics.forEach(c => {
+    const el = document.getElementById(`comic-${c.id}`);
     if (el) observer.observe(el);
   });
 }
 
-function handleHashNav(comics) {
+function handleHashNav() {
   if (location.hash) {
     const id = location.hash.slice(1);
     const el = document.getElementById(`comic-${id}`);

@@ -1,3 +1,24 @@
+/* ===== Theme: Securities ===== */
+[data-theme="securities"] {
+  --primary: #b45309;
+  --primary-light: #fef3c7;
+  --panel-bg: #fffbeb;
+  --panel-border: #fde68a;
+}
+
+[data-theme="securities"] .comic-description {
+  background: #fffbeb;
+  border-top-color: #fcd34d;
+}
+
+[data-theme="securities"] .desc-label {
+  color: #92400e;
+}
+
+[data-theme="securities"] .comic-description p {
+  color: #451a03;
+}
+
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -27,6 +48,37 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
+}
+
+/* ===== Site-wide Category Nav ===== */
+.site-nav {
+  background: #0f172a;
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.site-nav-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.site-nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.site-nav-link.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* ===== Header ===== */
@@ -61,7 +113,7 @@ header p {
   justify-content: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 99;
   box-shadow: var(--shadow);
 }
 

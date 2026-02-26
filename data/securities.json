@@ -1,0 +1,74 @@
+[
+  {
+    "id": "cows",
+    "term": "CoWoS",
+    "fullName": "Chip-on-Wafer-on-Substrate",
+    "description": "TSMCが開発した先端パッケージング技術。GPUダイとHBMメモリを1つの基板上に密接配置することで、チップ間の帯域幅を飛躍的に向上させる。NVIDIA H100/H200/B100シリーズに必須の製造工程であり、TSMCのCoWoS生産キャパシティがAIチップの供給制約を左右する。アナリストはTSMCの決算でCoWoS関連売上とキャパシティ増強計画を重点的にチェックする。",
+    "panels": [
+      {
+        "image": "images/cows_1.png",
+        "caption": "アナリスト「NVIDIAのH100が全然足りないって聞いたけど、なんで？」\nエンジニア「CoWoSのキャパが足りないんですよ」"
+      },
+      {
+        "image": "images/cows_2.png",
+        "caption": "エンジニア「GPU本体とHBMメモリを同じ基板に載せる特殊工程で、TSMCしか量産できない」\nアナリスト「それは確かに詰まるな…」"
+      },
+      {
+        "image": "images/cows_3.png",
+        "caption": "アナリスト「TSMCの決算でCapExが増えてたのはそれか！」\nエンジニア「CoWoSライン増設に数千億円規模の投資が必要なんです」"
+      },
+      {
+        "image": "images/cows_4.png",
+        "caption": "アナリスト「つまりAI需要が続く限りTSMCのCoWoS受注は鉄板か」\nエンジニア「供給制約が続く間はNVIDIAもTSMCも強気ですね」"
+      }
+    ]
+  },
+  {
+    "id": "cpo",
+    "term": "CPO",
+    "fullName": "Co-Packaged Optics",
+    "description": "スイッチングASICと光トランシーバを同一パッケージに統合する次世代技術。現在は別々のモジュールで接続するが、CPOにより消費電力と伝送ロスを大幅削減できる。AI学習クラスタのスケールアップに伴いデータセンター内通信が爆発的に増えており、400G→800G→1.6Tと帯域が拡大する中でCPOの重要性が高まっている。Marvell・Broadcom・Coherentなどが主要プレイヤー。",
+    "panels": [
+      {
+        "image": "images/cpo_1.png",
+        "caption": "アナリスト「AIサーバーって電力コストがすごいって言うけど、通信部分も食うの？」\nエンジニア「光トランシーバが意外と電力バカ食いなんです」"
+      },
+      {
+        "image": "images/cpo_2.png",
+        "caption": "エンジニア「今は電気→光→電気の変換を外付けモジュールでやってる。これがロスの元」\nアナリスト「チップの横に直接付けられないの？」"
+      },
+      {
+        "image": "images/cpo_3.png",
+        "caption": "エンジニア「それがCPOです。ASICと光を同一パッケージに統合する」\nアナリスト「電力30〜40%削減？それはデータセンターの運営コストが激変するな」"
+      },
+      {
+        "image": "images/cpo_4.png",
+        "caption": "アナリスト「Marvellが強いって聞いたけどなぜ？」\nエンジニア「DSPとシリコンフォトニクスを両方持ってるから。これがCPO実現の肝です」"
+      }
+    ]
+  },
+  {
+    "id": "hbm",
+    "term": "HBM",
+    "fullName": "High Bandwidth Memory",
+    "description": "AIアクセラレータ向けの超高速メモリ規格。複数のDRAMダイを垂直に積み重ね（スタッキング）、TSVと呼ばれる貫通電極で接続することで通常DRAMの10倍以上の帯域幅を実現する。NVIDIA GPUやGoogle TPUに搭載され、AI学習・推論の性能を左右する。SK Hynixが市場をリード、Samsung・Micronが追う構図。HBMの生産歩留まりとキャパシティ配分がメモリ株分析の核心。",
+    "panels": [
+      {
+        "image": "images/hbm_1.png",
+        "caption": "アナリスト「AI需要でメモリ株が上がってるけど、普通のDRAMと何が違うの？」\nSK Hynix担当「HBMは別物です。説明しましょう」"
+      },
+      {
+        "image": "images/hbm_2.png",
+        "caption": "担当「DRAMを8枚〜12枚縦に積み重ねて、貫通電極（TSV）でつなぐ。帯域幅が桁違い」\nアナリスト「それは製造難易度も桁違いでは…」"
+      },
+      {
+        "image": "images/hbm_3.png",
+        "caption": "担当「だから歩留まりが低くて価格も高い。NVIDIAはH100 1枚にHBMを80GB積んでます」\nアナリスト「それでSK HynixがNVIDIAと蜜月関係なのか」"
+      },
+      {
+        "image": "images/hbm_4.png",
+        "caption": "アナリスト「SamsungがHBM3E認証に手こずってた話はそういう背景か」\n担当「歩留まり改善が遅れると、NVIDIAの発注がうちに集中しますから…」"
+      }
+    ]
+  }
+]
