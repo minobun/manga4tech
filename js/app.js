@@ -62,9 +62,15 @@ function createCard(comic) {
   // Header
   const header = document.createElement('div');
   header.className = 'comic-header';
+  const fullNameHtml = comic.fullName
+    ? `<span class="term-fullname">${escapeHtml(comic.fullName)}</span>`
+    : '';
   header.innerHTML = `
     <span class="term-badge">${escapeHtml(comic.term)}</span>
-    <h2>ネットワーク用語四コマ</h2>
+    <div class="term-title-group">
+      ${fullNameHtml}
+      <h2>ネットワーク用語四コマ</h2>
+    </div>
   `;
 
   // Panel grid

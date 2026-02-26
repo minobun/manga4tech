@@ -2,6 +2,7 @@
   {
     "id": "tcp",
     "term": "TCP",
+    "fullName": "Transmission Control Protocol",
     "description": "Transmission Control Protocol。データが確実に届くことを保証する信頼性重視のプロトコル。送受信の確認（3ウェイハンドシェイク）を行い、パケットの順序保証・再送制御を実施する。WebやメールなどHTTPSが必要な通信に使われる。",
     "panels": [
       {
@@ -25,6 +26,7 @@
   {
     "id": "udp",
     "term": "UDP",
+    "fullName": "User Datagram Protocol",
     "description": "User Datagram Protocol。確認なしにデータを送りつける速度重視のプロトコル。信頼性より速さが優先される動画ストリーミング・音声通話・オンラインゲームなどに使われる。",
     "panels": [
       {
@@ -48,7 +50,8 @@
   {
     "id": "dns",
     "term": "DNS",
-    "description": "Domain Name System。人間に読みやすいドメイン名（example.com）をコンピュータが使うIPアドレス（93.184.216.34）に変換する仕組み。インターネットの「電話帳」とも呼ばれる。",
+    "fullName": "Domain Name System",
+    "description": "Domain Name System。人間に読みやすいドメイン名（example.com）をコンピュータが使うIPアドレス（例: 203.0.113.1）に変換する仕組み。インターネットの「電話帳」とも呼ばれる。",
     "panels": [
       {
         "image": "images/dns_1.png",
@@ -56,7 +59,7 @@
       },
       {
         "image": "images/dns_2.png",
-        "caption": "DNSさん（分厚い電話帳をパラパラ）\n「えーと、google.com…142.250.xx.xxですね！」"
+        "caption": "DNSさん（分厚い電話帳をパラパラ）\n「えーと、google.com…8.8.8.8ですね！」"
       },
       {
         "image": "images/dns_3.png",
