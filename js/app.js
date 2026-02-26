@@ -85,6 +85,11 @@ function createCard(comic, cardLabel) {
   `;
 
   card.append(header, grid, desc);
+
+  if (comic.sources && comic.sources.length > 0) {
+    card.appendChild(createSourcesBlock(comic.dataAsOf, comic.sources));
+  }
+
   return card;
 }
 
@@ -117,6 +122,31 @@ function createPanel(panel, num) {
 
   wrapper.append(numEl, imageWrap, caption);
   return wrapper;
+}
+
+function createSourcesBlock(dataAsOf, sources) {
+  const block = document.createElement('div');
+  block.className = 'comic-sources';
+
+  const asOfHtml = dataAsOf
+    ? `<span class="sources-date">情報時点: ${escapeHtml(dataAsOf)}</span>`
+    : '';
+
+  const itemsHtml = sources.map(s => `
+    <li class="source-item">
+      <span class="source-label">${escapeHtml(s.label)}</span>
+      ${s.note ? `<span class="source-note">${escapeHtml(s.note)}</span>` : ''}
+    </li>
+  `).join('');
+
+  block.innerHTML = `
+    <div class="sources-header">
+      <span class="sources-title">参考情報</span>
+      ${asOfHtml}
+    </div>
+    <ul class="sources-list">${itemsHtml}</ul>
+  `;
+  return block;
 }
 
 function makePlaceholder(num) {

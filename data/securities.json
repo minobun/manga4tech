@@ -4,6 +4,17 @@
     "term": "CoWoS",
     "fullName": "Chip-on-Wafer-on-Substrate",
     "description": "TSMCが開発した先端パッケージング技術。GPUダイとHBMメモリを1つの基板上に密接配置することで、チップ間の帯域幅を飛躍的に向上させる。NVIDIA H100/H200/B100シリーズに必須の製造工程であり、TSMCのCoWoS生産キャパシティがAIチップの供給制約を左右する。アナリストはTSMCの決算でCoWoS関連売上とキャパシティ増強計画を重点的にチェックする。",
+    "dataAsOf": "2024年Q3時点",
+    "sources": [
+      {
+        "label": "TSMC Q3 2024 Earnings Call（2024年10月）",
+        "note": "CoWoSキャパシティ増強・需給状況に関する経営陣コメント"
+      },
+      {
+        "label": "TrendForce, Advanced Packaging Market Report（2024年）",
+        "note": "先端パッケージング市場における供給制約の分析"
+      }
+    ],
     "panels": [
       {
         "image": "images/cows_1.png",
@@ -28,6 +39,21 @@
     "term": "CPO",
     "fullName": "Co-Packaged Optics",
     "description": "スイッチングASICと光トランシーバを同一パッケージに統合する次世代技術。現在は別々のモジュールで接続するが、CPOにより消費電力と伝送ロスを大幅削減できる。AI学習クラスタのスケールアップに伴いデータセンター内通信が爆発的に増えており、400G→800G→1.6Tと帯域が拡大する中でCPOの重要性が高まっている。Marvell・Broadcom・Coherentなどが主要プレイヤー。",
+    "dataAsOf": "2024年時点",
+    "sources": [
+      {
+        "label": "Ethernet Alliance, Ethernet Roadmap（2024年版）",
+        "note": "データセンター向け帯域幅ロードマップ（400G/800G/1.6T）"
+      },
+      {
+        "label": "Dell'Oro Group, Optical Networking Report（2024年）",
+        "note": "CPO市場の主要プレイヤー分析"
+      },
+      {
+        "label": "IEEE 802.3 Working Group資料",
+        "note": "消費電力削減効果（30〜40%）の技術的根拠"
+      }
+    ],
     "panels": [
       {
         "image": "images/cpo_1.png",
@@ -52,6 +78,21 @@
     "term": "HBM",
     "fullName": "High Bandwidth Memory",
     "description": "AIアクセラレータ向けの超高速メモリ規格。複数のDRAMダイを垂直に積み重ね（スタッキング）、TSVと呼ばれる貫通電極で接続することで通常DRAMの10倍以上の帯域幅を実現する。NVIDIA GPUやGoogle TPUに搭載され、AI学習・推論の性能を左右する。SK Hynixが市場をリード、Samsung・Micronが追う構図。HBMの生産歩留まりとキャパシティ配分がメモリ株分析の核心。",
+    "dataAsOf": "2024年Q3時点",
+    "sources": [
+      {
+        "label": "TrendForce, DRAM Market Report Q3 2024",
+        "note": "HBM市場シェア・各社キャパシティ動向"
+      },
+      {
+        "label": "JEDEC JESD235（HBM規格書）",
+        "note": "HBMの技術仕様・帯域幅定義"
+      },
+      {
+        "label": "NVIDIA H100 製品仕様書（公開資料）",
+        "note": "HBM搭載量（80GB）の根拠"
+      }
+    ],
     "panels": [
       {
         "image": "images/hbm_1.png",
