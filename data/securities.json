@@ -70,5 +70,245 @@
         "caption": "アナリスト「SamsungのHBM3E認証遅延って、その歩留まり問題が原因か」\nエンジニア「各社の歩留まり改善の進捗が、発注配分を左右するポイントです」"
       }
     ]
+  },
+  {
+    "id": "euv",
+    "term": "EUV",
+    "fullName": "Extreme Ultraviolet Lithography",
+    "description": "波長13.5nmの極端紫外線を使う半導体露光技術。7nm以下の先端ロジックチップ製造に不可欠で、オランダのASMLが製造装置を独占供給する。装置1台あたりの価格は高額で、TSMC・Samsung・Intelが主要顧客。EUV装置の出荷台数とバックログはサプライチェーン全体の生産能力予測の先行指標として機能する。",
+    "panels": [
+      {
+        "image": "images/euv_1.png",
+        "caption": "アナリスト「最先端チップってなんであんなに作るのが難しいの？」\nエンジニア「光でパターンを焼き付けるんですが、波長が短いほど細かく作れる」"
+      },
+      {
+        "image": "images/euv_2.png",
+        "caption": "エンジニア「EUVは波長13.5nm。この装置を作れるのは世界でASMLだけです」\nアナリスト「独占？それは強烈な参入障壁だな」"
+      },
+      {
+        "image": "images/euv_3.png",
+        "caption": "アナリスト「TSMC・Samsung・Intelの設備投資がASMLの業績を決めるわけか」\nエンジニア「装置のバックログを見れば2〜3年先の供給能力が見えてくる」"
+      },
+      {
+        "image": "images/euv_4.png",
+        "caption": "アナリスト「EUV装置が輸出規制されたら中国の先端チップ製造はどうなる？」\nエンジニア「そこが今の地政学リスクの核心です」"
+      }
+    ]
+  },
+  {
+    "id": "chiplet",
+    "term": "Chiplet",
+    "fullName": "Chiplet Architecture",
+    "description": "1つの巨大チップを複数の小チップ（ダイ）に分割し、パッケージ内で統合する設計手法。製造歩留まりの改善・コスト削減・異なるプロセスノードの混在が可能になる。AMDがEPYCサーバーCPUで採用し競争力を大きく回復。業界共通規格UCIeの整備が進み、異なるメーカー間でのチップレット組み合わせが可能になりつつある。",
+    "panels": [
+      {
+        "image": "images/chiplet_1.png",
+        "caption": "アナリスト「AMDってIntelに負けてたのに急に強くなったよね、なぜ？」\nエンジニア「チップレットという設計手法を採用したんです」"
+      },
+      {
+        "image": "images/chiplet_2.png",
+        "caption": "エンジニア「大きなチップ1枚より小チップを組み合わせた方が、不良が出ても損失が少ない」\nアナリスト「歩留まりが上がってコストが下がるわけか」"
+      },
+      {
+        "image": "images/chiplet_3.png",
+        "caption": "エンジニア「さらに演算部は最先端プロセス、入出力部は古いプロセスと使い分けもできる」\nアナリスト「コスト最適化と性能を両立できる。それがIntelに差をつけた理由か」"
+      },
+      {
+        "image": "images/chiplet_4.png",
+        "caption": "アナリスト「UCIeで他社チップとも組み合わせられるようになったら業界構造が変わるな」\nエンジニア「半導体版レゴブロック。覇権争いの新戦場です」"
+      }
+    ]
+  },
+  {
+    "id": "asic",
+    "term": "ASIC",
+    "fullName": "Application-Specific Integrated Circuit",
+    "description": "特定用途向けに専用設計された半導体チップ。汎用GPUより特定タスクでの電力効率・コスト効率が高い。GoogleのTPU、AmazonのTrainium/Inferentia、MetaのMTIAなどハイパースケーラーが自社AI向けASIC開発を加速しており、長期的に汎用GPU依存度を下げる動きとして注目される。",
+    "panels": [
+      {
+        "image": "images/asic_1.png",
+        "caption": "アナリスト「Googleって自分でAIチップ作ってるって聞いたけど、GPUじゃダメなの？」\nエンジニア「特定用途なら専用設計の方が圧倒的に効率がいいんです」"
+      },
+      {
+        "image": "images/asic_2.png",
+        "caption": "エンジニア「汎用GPUはなんでも処理できる代わりに無駄が多い。ASICはその用途だけに最適化する」\nアナリスト「電力コストが桁違いに改善できるわけか」"
+      },
+      {
+        "image": "images/asic_3.png",
+        "caption": "アナリスト「でもGoogle・Amazon・Metaが全部自社で作り始めたら…」\nエンジニア「NVIDIAのGPU需要が長期的に侵食されるリスクとして市場は警戒してます」"
+      },
+      {
+        "image": "images/asic_4.png",
+        "caption": "アナリスト「じゃあASIC設計を受託する企業が恩恵を受ける？」\nエンジニア「設計ツールや製造受託の会社が注目されている理由がそこです」"
+      }
+    ]
+  },
+  {
+    "id": "inference-training",
+    "term": "推論 vs 学習",
+    "fullName": "AI Inference vs Training",
+    "description": "AI処理は学習（Training）と推論（Inference）に大別される。学習はモデルを作る一度きりの重処理でH100等ハイエンドGPUを大量消費。推論は学習済みモデルでユーザーのリクエストを処理する継続的処理で、コスト効率が重視される。ChatGPT普及以降、推論需要が急増しており、学習向けとは異なるチップ要件から新たな市場機会が生まれている。",
+    "panels": [
+      {
+        "image": "images/inference_1.png",
+        "caption": "アナリスト「AIチップって全部H100みたいなやつが必要なの？」\nエンジニア「実はAI処理には学習と推論の2種類があって、必要なチップが全然違う」"
+      },
+      {
+        "image": "images/inference_2.png",
+        "caption": "エンジニア「学習は料理のレシピ開発。最高の設備で一度だけやれば終わり」\nエンジニア「推論は毎日の料理。安くて効率的な設備で大量にこなす必要がある」"
+      },
+      {
+        "image": "images/inference_3.png",
+        "caption": "アナリスト「ChatGPTが爆発的に使われるようになると推論コストが問題になるわけか」\nエンジニア「学習より推論の方がトータルの計算コストが大きくなるとも言われています」"
+      },
+      {
+        "image": "images/inference_4.png",
+        "caption": "アナリスト「推論に強いチップを作る企業が次の覇者になる可能性があるな」\nエンジニア「そこが今の半導体株投資の最大の論点の一つです」"
+      }
+    ]
+  },
+  {
+    "id": "design-win",
+    "term": "Design Win",
+    "fullName": "Design Win",
+    "description": "チップメーカーが顧客製品への採用を決定されること。実際の売上計上は量産開始まで数年後になるが、採用決定時点で将来の売上がほぼ確定するため、アナリストにとって最重要の先行指標。Design Winの規模・顧客の格・量産時期を分析することで、数年先の売上予測が可能になる。",
+    "panels": [
+      {
+        "image": "images/designwin_1.png",
+        "caption": "アナリスト「半導体株って業績より先に株が動く気がするんだけど、なんで？」\nエンジニア「Design Winという概念を知ると理由がわかります」"
+      },
+      {
+        "image": "images/designwin_2.png",
+        "caption": "エンジニア「チップが顧客製品に採用されてから量産・売上計上まで2〜3年かかる」\nアナリスト「採用決定＝将来の売上が確定ということか」"
+      },
+      {
+        "image": "images/designwin_3.png",
+        "caption": "アナリスト「つまりDesign Winが増えてるチップ会社は、まだ売上に出てなくても強い？」\nエンジニア「決算発表でDesign Win数を開示する会社の株が決算前に動くのはそのためです」"
+      },
+      {
+        "image": "images/designwin_4.png",
+        "caption": "アナリスト「どのくらいの規模のDesign Winかも重要だな」\nエンジニア「顧客が誰かと量産台数の見込みで、影響が10倍以上変わります」"
+      }
+    ]
+  },
+  {
+    "id": "capex-cycle",
+    "term": "CapEx Cycle",
+    "fullName": "Capital Expenditure Cycle",
+    "description": "半導体製造に必要な設備投資サイクル。TSMCのCapEx計画は半導体サプライチェーン全体の数年先の供給能力を示す指標として機能する。装置メーカーの売上はファウンドリのCapExと高い相関を持つ。過去の投資超過が価格下落→投資抑制→供給不足→価格回復というサイクルを繰り返す。",
+    "panels": [
+      {
+        "image": "images/capex_1.png",
+        "caption": "アナリスト「半導体の装置株って、TSMCの決算で動くよね」\nエンジニア「CapEx、つまり設備投資計画に連動しているんです」"
+      },
+      {
+        "image": "images/capex_2.png",
+        "caption": "エンジニア「TSMCが今年1兆円投資すると言えば、装置メーカーへの発注がその年に積みあがる」\nアナリスト「TSMC決算はサプライチェーン全体の先行指標か」"
+      },
+      {
+        "image": "images/capex_3.png",
+        "caption": "アナリスト「でも投資しすぎると供給過剰で価格が崩れることもある」\nエンジニア「それがCapExサイクル。強気→過剰投資→価格崩壊→抑制→不足の繰り返しです」"
+      },
+      {
+        "image": "images/capex_4.png",
+        "caption": "アナリスト「AI需要でTSMCがCapExを上げ続けている今は、装置株に追い風が続くわけか」\nエンジニア「ただしサイクルの転換点を読み誤ると大きなダウンサイドリスクになります」"
+      }
+    ]
+  },
+  {
+    "id": "dram-cycle",
+    "term": "DRAM Cycle",
+    "fullName": "DRAM Market Cycle",
+    "description": "DRAM市場は需給サイクルが明確で、供給過剰→価格下落→各社投資抑制→供給不足→価格上昇を繰り返す。通常3〜4年周期とされる。アナリストはビット成長率・在庫水準（週数）・ASP（平均販売単価）の3指標でサイクルの位置を判断する。AI需要によるHBM特需が通常のDRAMサイクルに複雑な影響を与えている。",
+    "panels": [
+      {
+        "image": "images/dram_1.png",
+        "caption": "アナリスト「メモリ株って景気に関係なく上下してる気がするけど」\nエンジニア「DRAMには独自の需給サイクルがあるんです」"
+      },
+      {
+        "image": "images/dram_2.png",
+        "caption": "エンジニア「需要が増える→各社が一斉に設備投資→数年後に供給が需要を超える→価格崩壊」\nアナリスト「みんなが同じ判断をするから過剰になるのか」"
+      },
+      {
+        "image": "images/dram_3.png",
+        "caption": "アナリスト「それを追うのに何を見ればいい？」\nエンジニア「在庫週数・ビット成長率・ASP。この3つがサイクルの位置を教えてくれます」"
+      },
+      {
+        "image": "images/dram_4.png",
+        "caption": "アナリスト「AI向けHBMが出てきてから読みにくくなったな」\nエンジニア「HBMとコモディティDRAMで別のサイクルが走り始めているのが今の難しさです」"
+      }
+    ]
+  },
+  {
+    "id": "sovereign-ai",
+    "term": "Sovereign AI",
+    "fullName": "Sovereign AI",
+    "description": "各国政府が自国内にAIインフラ（データセンター・基盤モデル）を整備する動き。データ主権・安全保障の観点から欧州・中東・東南アジア等が積極的に投資。AIチップメーカーにとって政府調達という新たな需要軸が生まれており、地政学情勢と米国の輸出規制が市場機会を大きく左右する。",
+    "panels": [
+      {
+        "image": "images/sovereign_1.png",
+        "caption": "アナリスト「最近『Sovereign AI』ってよく聞くけど何それ？」\nエンジニア「各国が自分たちのAIを自国のインフラで動かそうという動きです」"
+      },
+      {
+        "image": "images/sovereign_2.png",
+        "caption": "エンジニア「医療・行政・金融のデータを海外のクラウドに預けたくない国は多い」\nアナリスト「データ主権の問題か。それで各国政府がデータセンターに投資するわけか」"
+      },
+      {
+        "image": "images/sovereign_3.png",
+        "caption": "アナリスト「AIチップメーカーにとっては、民間企業に加えて政府も顧客になるわけだな」\nエンジニア「中東・東南アジアなど新興国の政府需要が新たな需要の柱になっています」"
+      },
+      {
+        "image": "images/sovereign_4.png",
+        "caption": "アナリスト「でも米国の輸出規制がある国には売れないよね」\nエンジニア「そこが最大のリスク。地政学がビジネスチャンスと規制を同時に作り出している」"
+      }
+    ]
+  },
+  {
+    "id": "nvlink",
+    "term": "NVLink",
+    "fullName": "NVLink",
+    "description": "NVIDIAが開発したGPU間の独自高速接続技術。汎用規格PCIeより大幅に高い帯域幅を実現し、複数のGPUを密結合させて大規模AI学習クラスターを構築できる。NVLinkに依存したシステム設計が広まっているため、代替GPUへの乗り換えコストが非常に高く、NVIDIAの競争優位を支える参入障壁として機能する。",
+    "panels": [
+      {
+        "image": "images/nvlink_1.png",
+        "caption": "アナリスト「AMD・IntelもAI向けGPU出してるのに、なんでNVIDIAのシェアが下がらないの？」\nエンジニア「NVLinkという独自規格が大きな理由の一つです」"
+      },
+      {
+        "image": "images/nvlink_2.png",
+        "caption": "エンジニア「汎用のPCIeでGPUをつないでも帯域が足りない。NVLinkは桁違いの速度でGPUを連結できる」\nアナリスト「大規模AIを作るにはNVLinkが前提になるわけか」"
+      },
+      {
+        "image": "images/nvlink_3.png",
+        "caption": "アナリスト「NVLinkに対応したシステムを一度組んだら他社に乗り換えるのが難しい？」\nエンジニア「ソフトウェア・インフラ全体がNVIDIAエコシステムに最適化されてしまうんです」"
+      },
+      {
+        "image": "images/nvlink_4.png",
+        "caption": "アナリスト「それがNVIDIAの高いグロスマージンを支えている参入障壁か」\nエンジニア「技術の壁ではなくエコシステムの壁。これが最も崩しにくい」"
+      }
+    ]
+  },
+  {
+    "id": "fabless-idm-foundry",
+    "term": "Fabless / IDM / Foundry",
+    "fullName": "Semiconductor Business Models",
+    "description": "半導体産業の3つのビジネスモデル。Fabless（設計専業：NVIDIA・AMD・Qualcomm等）は製造を持たず資産効率が高い。IDM（設計+製造一体：Intel・Samsung等）は垂直統合で差別化できる反面、設備投資負担が重い。Foundry（製造受託専業：TSMC・UMC等）は複数顧客の製造を担い稼働率が収益の鍵。各モデルでバリュエーション評価の前提が異なる。",
+    "panels": [
+      {
+        "image": "images/fabless_1.png",
+        "caption": "アナリスト「NVIDIAって工場持ってないのになんでそんなに強いの？」\nエンジニア「Fablessというビジネスモデルが理由の一つです」"
+      },
+      {
+        "image": "images/fabless_2.png",
+        "caption": "エンジニア「Fablessは設計に集中して製造はTSMCに外注。工場不要で資産効率が高い」\nエンジニア「IDMは設計も製造も自社でやるIntelやSamsungのモデル」"
+      },
+      {
+        "image": "images/fabless_3.png",
+        "caption": "アナリスト「TSMCはFablessの仕事を請け負う製造専業か」\nエンジニア「Foundryと呼びます。複数顧客の最先端チップを製造することで巨大な設備投資を回収する」"
+      },
+      {
+        "image": "images/fabless_4.png",
+        "caption": "アナリスト「同じ半導体でもモデルで財務構造が全然違うから比較が難しい」\nエンジニア「ROE・設備投資比率・グロスマージンの見方がモデルごとに変わります」"
+      }
+    ]
   }
 ]
